@@ -36,6 +36,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
+                    sh 'ls -l $WORKSPACE'
                     // Build the Docker image
                     sh 'docker build -t ${DOCKER_IMAGE} .'
                 }
