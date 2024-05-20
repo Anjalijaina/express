@@ -36,10 +36,13 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
+                    sh 'sudo visudo'
+                    
+
                     sh 'sudo systemctl restart jenkins'
 
                     sh 'ls -l $WORKSPACE'
-                   sh 'sudo chmod 777 /var/run/docker.sock'
+                   sh 'sudo chmod 777 run/docker.sock'
                     
                     // Build the Docker image
                     sh 'sudo docker build -t ${DOCKER_IMAGE} .'
