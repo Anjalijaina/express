@@ -37,11 +37,11 @@ pipeline {
             steps {
                 script {
                     //sh 'sudo visudo'
-                     sh 'sudo chmod 777 /var/run/docker.sock'
+                   //  sh 'sudo chmod 777 /var/run/docker.sock'
 
-                    sh 'sudo systemctl start jenkins'
+                  //  sh 'sudo systemctl start jenkins'
 
-                    sh 'ls -l $WORKSPACE'
+                   // sh 'ls -l $WORKSPACE'
                   
                     
                     // Build the Docker image
